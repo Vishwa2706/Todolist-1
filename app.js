@@ -15,7 +15,7 @@ app.get('/', (req,res)=>{
     let options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
     let today = new Date();
     let day = today.toLocaleDateString("en-US", options);
-    res.render('list', {kindOfDay:day , newListItem: newItems});
+    res.render('index', {kindOfDay:day , newListItem: newItems});
 });
 
 app.post("/",(req,res)=>{
